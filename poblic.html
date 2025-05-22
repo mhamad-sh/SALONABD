@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/poblic..css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+  <title>public</title>
+</head>
+<body>
+  <div class="head">
+    <div class="home">
+      <a href="personal web.html">
+        <i class="fa-solid fa-house"></i>
+        <p class="Home" >Home</p>
+      </a>
+    </div>
+    <di class="public">
+      <i class="fa-solid fa-bullhorn"></i>
+      <p class="public">public</p>
+
+    </div>
+  </div>
+  <div class="container">
+<div class="image"><img src="public/public1.jpg" alt=""></div>
+<div class="image"><img src="public/public2.jpg" alt=""></div>
+<div class="image"><img src="public/public3.jpg" alt=""></div>
+<div class="image"><img src="public/public4.jpg" alt=""></div>
+<div class="image"><img src="public/public5.jpg" alt=""></div>
+<div class="image"><img src="public/public6.jpg" alt=""></div>
+<div class="image"><img src="public/public7.jpg" alt=""></div>
+<div class="image"><img src="public/public8.jpg" alt=""></div>
+<div class="image"><img src="public/public9.jpg" alt=""></div>
+<div class="image"><img src="public/public10.jpg" alt=""></div>
+<div class="image"><img src="public/public11.jpg" alt=""></div>
+<div class="image"><img src="public/public12.jpg" alt=""></div>
+<div class="image"><img src="public/public13.jpg" alt=""></div>
+<div class="image"><img src="public/public14.jpg" alt=""></div>
+<div class="image"><img src="public/public15.jpg" alt=""></div>
+<div class="image"><img src="public/public16.jpg" alt=""></div>
+<div class="image"><img src="public/public17.jpg" alt=""></div>
+<div class="image"><img src="public/public18.jpg" alt=""></div>
+<div class="image"><img src="public/public19.jpg" alt=""></div>
+<div class="image"><img src="public/public20.jpg" alt=""></div>
+<div class="image"><img src="public/public21.jpg" alt=""></div>
+<div class="image"><img src="public/public22.jpg" alt=""></div>
+<div class="image"><img src="public/public23.jpg" alt=""></div>
+<div class="image"><img src="public/public24.jpg" alt=""></div>
+<div class="image"><img src="public/public25.jpg" alt=""></div>
+<div class="image"><img src="public/public26.jpg" alt=""></div>
+<div class="image"><img src="public/public27.jpg" alt=""></div>
+<div class="image"><img src="public/public28.jpg" alt=""></div>
+  </div>
+  <div class="overlay" id="overlay">
+    <img src="" alt="صورة مكبرة" id="zoomedImage">
+  </div>
+  <script>
+    const overlay = document.getElementById('overlay');
+  const zoomedImage = document.getElementById('zoomedImage');
+  
+  document.querySelectorAll('.container .image img').forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImage.src = img.src;
+      overlay.classList.add('active');
+    });
+  });
+  
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('active');
+    zoomedImage.src = '';
+  });
+  </script>
+</body>
+</html>
