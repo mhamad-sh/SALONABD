@@ -1,0 +1,95 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+
+}
+body{
+  background-image: url(../img/black_ribbon_texture_red_background_hd_red_and_black_aesthetic.jpg);
+}
+.head{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid black ;
+
+}
+.head .public{
+  margin: auto auto;
+  display: flex;
+
+}
+.public i{
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.Home,.public{
+  font-size: 30px;
+  color: white;
+}
+.home a{
+  display: flex ;
+  margin-left: 20px;
+}
+.home {
+  height:all;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.home i{
+ color: white;
+ font-size: 25px;
+ margin-right: 10px;
+
+}
+.container{
+  padding: 50px;
+  width: 100%;
+  height:100vh ;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr)) ;
+  gap: 100px 100px;
+}
+img{
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.image{
+  padding: 20px;
+}
+.image img:hover{
+  transform: scale(1.05);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.overlay img {
+  width: 1000px;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
