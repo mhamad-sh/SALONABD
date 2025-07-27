@@ -1,0 +1,46 @@
+body {
+  background-image: url(../img/1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav .head .home,
+nav .head .video {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  align-items: center;
+  flex-direction: row;
+}
+.p {
+  margin-left: 10px;
+}
+.head {
+  display: flex;
+  justify-content: space-around;
+}
+nav .head .home a {
+  text-decoration: none;
+  color: aliceblue;
+}
+nav .head .video {
+  display: flex;
+}
+.container {
+  padding: 50px;
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 80px 80px;
+}
+.container iframe {
+  margin: auto auto;
+}
+.long {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+}
+.long iframe {
+  margin: 15px;
+}
