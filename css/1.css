@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+header nav a,
+header nav span {
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: url(../img/wlc-bg1.jpg);
+  z-index: 999;
+}
+
+.loc {
+  flex-direction: column;
+}
+
+.loca {
+  margin: 20px;
+  margin-left: 25px;
+}
+
+.location i {
+  color: red;
+}
+
+.location {
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #afafaf93;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  background-color: black;
+}
+
+header nav .logo {
+  color: #fff;
+  font-size: 46px;
+  font-weight: bolder;
+  display: flex;
+}
+
+header nav .logo span {
+  color: red;
+}
+
+header nav .links {
+  display: flex;
+}
+
+header nav .links li {
+  position: relative;
+  margin: 0 25px;
+  height: 80px;
+  line-height: 80px;
+  list-style: none;
+}
+
+header nav .links li::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition: 0.3s;
+}
+
+header nav .links li:hover::after,
+header nav .links li.active::after {
+  width: 100%;
+}
+
+header nav .links li a {
+  color: #c8c6c6;
+  font-size: 17px;
+}
+
+.social-links a i {
+  color: red;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.social-links a i:hover {
+  color: #fff;
+}
+
+.social-links a i {
+  color: red;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.hero-sec {
+  height: 80vh;
+  background: url(../img/wlc-bg1.jpg);
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+}
+
+.hero-sec .container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.hero-sec .container .div-txt {
+  width: 50%;
+}
+
+.hero-sec .container .div-txt h1 {
+  color: #fff;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.hero-sec .container .div-txt span {
+  font-size: 40px;
+  color: red;
+}
+
+.hero-sec .container .div-txt p {
+  color: #c8c6c6;
+  font-size: 18px;
+  margin: 10px 0 50px;
+  line-height: 1.7;
+}
+
+.hero-sec .container .div-txt .btn {
+  color: #fff;
+  border: 1px solid red;
+  background-color: red;
+  padding: 14px 40px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hero-sec .container .div-txt .btn:hover {
+  background: transparent;
+}
+
+.hero-sec .container .div-img {
+  height: 70%;
+  width: 50%;
+  position: relative;
+  bottom: -20px;
+  transition: transform 0.5s;
+  right: 0;
+}
+
+.hero-sec .container .div-img img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+#btnMenu {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  header nav .links {
+    position: absolute;
+    top: 100%;
+    right: -420px;
+    flex-direction: column;
+    background-color: black;
+    border-left: 1px solid #444444a8;
+    width: 400px;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 0;
+    transition: 0.3s;
+  }
+  header nav .links.active {
+    right: 0;
+  }
+  #btnMenu {
+    color: #fff;
+    font-size: 30px;
+    display: block;
+  }
+  .hero-sec {
+    height: auto;
+    overflow: hidden;
+  }
+  .hero-sec .container {
+    flex-direction: column;
+  }
+  .hero-sec .container .div-txt {
+    width: 80%;
+    margin-top: 150px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .hero-sec .container .div-txt h1 {
+    font-size: 50px;
+  }
+  .hero-sec .container .div-txt span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-sec .container .div-txt h1 {
+    font-size: 35px;
+  }
+  .hero-sec .container .div-txt span {
+    font-size: 25px;
+  }
+  .hero-sec .container .div-txt p {
+    font-size: 16px;
+  }
+  .hero-sec .container .div-img {
+    width: 100%;
+  }
+
+  header nav a .title {
+    font-size: 30px;
+  }
+}
