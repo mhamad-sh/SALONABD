@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/my work.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>MY WORK</title>
+</head>
+
+<body>
+    <div class="head" id="head">
+        <div class="Title" id="Title"><i class="fa-solid fa-scissors"></i>
+            <p class="title"> MY WORK</p>
+        </div>
+        <div class="HOME">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p class="home">Home</p>
+        </div>
+        </a>
+    </div>
+    <div class="container">
+        <div class="image"><img src="https://i.imgur.com/Ez0p3Fx.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/Areft6W.jpeg                     " alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/0MMyH9l.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/hLZ8SWz.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/Rkq24oj.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/JT2QEQY.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/5tSssIj.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/Rkq24oj.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/6Zccuny.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/Bp9K5rK.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/hUY1UW3.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/RFcYBJ9.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/IzWkg9P.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/euNKlTm.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/D1rxhJD.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/BmJokwt.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/qvWADa8.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/9ouRI4K.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/u4ONuO7.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/X7vdllZ.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/enMBQSw.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/R4onu4c.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/Yw8coNn.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/1bpqzNT.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/0mijqRX.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/dTqFVMH.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/YO7eulF.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/4PkQuec.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/2pN0LCn.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/Zpm3y7H.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/112lq6t.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/tb8W2Uh.jpeg" alt=""></div>
+        <div class="image"><img src="https://i.imgur.com/XTybsBS.jpeg" alt=""></div>
+    </div>
+    <div class="overlay" id="overlay">
+        <img src="" alt="صورة مكبرة" id="zoomedImage">
+    </div>
+    <script>
+        const overlay = document.getElementById('overlay');
+        const zoomedImage = document.getElementById('zoomedImage');
+
+        document.querySelectorAll('.container .image img').forEach(img => {
+            img.addEventListener('click', () => {
+                zoomedImage.src = img.src;
+                overlay.classList.add('active');
+            });
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            zoomedImage.src = '';
+        });
+    </script>
+    <script>
+        let Title = document.getElementById("Title");
+
+        function size() {
+            if (window.innerWidth < 768)
+                Title.style.transform = "translate(20%,70%)";
+
+        }
+        window.addEventListener('resize', size())
+    </script>
+</body>
+
+</html>
